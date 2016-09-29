@@ -3,6 +3,16 @@
       {{ form.title }}<i ng-show="form.required">&nbsp;*</i>
    </label>
 
+   <div ng-show="!picFile" class="row mb">
+      <div class="col-sm-4 mb-sm">
+         <label title="{{ 'modules.upload.field.current' | translate }}" class="text-info">
+            {{'modules.upload.field.current' | translate }}</label>
+         <div>
+            <img class="img-thumbnail img-responsive" src="{{$$value$$}}"/>
+         </div>
+      </div>
+   </div>
+
    <div ng-show="picFile">
       <div ng-include="'uploadProcess.html'" class="mb"></div>
    </div>
